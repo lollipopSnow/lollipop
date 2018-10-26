@@ -1,0 +1,21 @@
+cd C:\Program Files\Microsoft Office\Office16
+CSCRIPT OSPP.VBS /SETHST:192.168.31.1
+CSCRIPT OSPP.VBS /ACT
+CSCRIPT OSPP.VBS /DSTATUS
+
+
+cd C:\Windows\System32
+slmgr /skms 192.168.1.1
+slmgr /ato
+slmgr /xpr #检查激活状态
+
+激活Office2016（以64位为例子）
+cd C:\Program Files\Microsoft Office\Office16
+CSCRIPT OSPP.VBS /SETHST:192.168.31.1
+CSCRIPT OSPP.VBS /ACT
+CSCRIPT OSPP.VBS /DSTATUS
+激活Windows
+cd C:\Windows\System32
+CSCRIPT /NOLOGO SLMGR.VBS /SKMS 192.168.31.1
+CSCRIPT /NOLOGO SLMGR.VBS /ATO
+CSCRIPT /NOLOGO SLMGR.VBS /XPR
